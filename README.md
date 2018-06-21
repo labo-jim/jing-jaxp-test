@@ -5,4 +5,4 @@ with Jing trough the JAXP API.
  
 Booth valid and invalid xml files are tested.
 
-Related to <https://github.com/mojohaus/xml-maven-plugin/issues/21#issuecomment-381867691>
+Related to <https://github.com/rosslamont/jxvc/issues/24>

@@ -1,3 +1,4 @@
+package jim;
 import static org.junit.Assert.*;
 
 import java.io.File;
@@ -6,6 +7,7 @@ import java.net.URISyntaxException;
 import org.junit.Test;
 
 import jim.Lauchner;
+import jim.debug.TraceHandler;
 
 /**
  * 
@@ -79,6 +81,19 @@ public class NamespaceTest {
 		} catch (Exception e) {
 			
 		}	
+	}
+	
+	@Test
+	public void ValidateIncorrectSaxAndTrace(){	
+		try {
+			File xml = resource(XML_INVALID);
+			File rng = resource(RNG);
+			
+			Lauchner.validateSax(xml, rng, new TraceHandler());	
+			
+			
+		} catch (Exception e) {}	
+		// never fails, just trace...
 	}
 	
 	private static File resource(String name) throws URISyntaxException {
